@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Profiles = styled.div`
-  margin: 22px 16px 0;
+  /* margin: 22px 16px 0; */
+  margin-bottom: 22px;
 `;
 
 export const ProfileItem = styled.div`
@@ -9,7 +10,11 @@ export const ProfileItem = styled.div`
   align-items: center;
 `;
 
-export const Photo = styled.div``;
+export const Photo = styled.img`
+  border-radius: 50%;
+  height: 72px;
+  width: 72px;
+`;
 
 export const WorkerInfo = styled.div`
   width: 100%;

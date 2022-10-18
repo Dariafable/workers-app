@@ -26,6 +26,11 @@ export const BackArrow = styled(MdArrowBackIosNew)`
   cursor: pointer;
 `;
 
+export const WorkerPhoto = styled.img`
+  margin-bottom: 24px;
+  border-radius: 50%;
+`;
+
 export const Name = styled.h2`
   margin-bottom: 12px;
   font-weight: 700;

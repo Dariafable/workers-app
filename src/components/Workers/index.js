@@ -1,36 +1,37 @@
 import React from 'react';
-import {
-  Profiles,
-  ProfileItem,
-  Photo,
-  WorkerInfo,
-  Right,
-  Name,
-  Abb,
-  Work,
-  Left,
-} from './WorkersStyles';
+import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
+import { useSelector } from 'react-redux';
 
-const Workers = () => {
+import WorkerItem from '../../pages/WorkerItem/WorkerItem';
+
+import * as Styled from './WorkerStyles';
+
+const Workers = ({ id, avatarUrl, firstName, lastName, userTag, position, birthday }) => {
+  const birthDay = dayjs(birthday).format('DD MMM');
+  const { sort } = useSelector((state) => state.filters);
+
   return (
-    <Profiles>
-      <ProfileItem>
-        <Photo>
-          <img src='https://placehold.co/72x72' alt=''></img>
-        </Photo>
-        <WorkerInfo>
-          <Right>
-            <Name>
-              Алексей Миногаров <Abb>mi</Abb>
-            </Name>
-            <Work>Analyst</Work>
-          </Right>
-          <Left>
-            <p>29 июн</p>
-          </Left>
-        </WorkerInfo>
-      </ProfileItem>
-    </Profiles>
+    <Link to={`/workerItem/${id}`} element={<WorkerItem />}>
+      <Styled.Profiles>
+        <Styled.ProfileItem>
+          <Styled.Photo src={avatarUrl} alt='' />
+          <Styled.WorkerInfo>
+            <Styled.Right>
+              <Styled.Name>
+                {firstName} {lastName} <Styled.Abb>{userTag}</Styled.Abb>
+              </Styled.Name>
+              <Styled.Work>{position}</Styled.Work>
+            </Styled.Right>
+            {sort === 'birthday' && (
+              <Styled.Left>
+                <p>{birthDay}</p>
+              </Styled.Left>
+            )}
+          </Styled.WorkerInfo>
+        </Styled.ProfileItem>
+      </Styled.Profiles>
+    </Link>
   );
 };
 

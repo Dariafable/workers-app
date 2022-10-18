@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { ErrorContainer, Image, Title, Text, TextUpdate } from './ErrorStyles';
+import * as Styled from './ErrorStyles';
 import flyingSaucer from '../../assets/flyingSaucer.svg';
 
 const ErrorBlock = () => {
   return (
-    <ErrorContainer>
-      <Image src={flyingSaucer}></Image>
-      <Title>Какой-то сверхразум все сломал</Title>
-      <Text>Постараемся быстро починить</Text>
-      <TextUpdate>Попробовать снова</TextUpdate>
-    </ErrorContainer>
+    <Styled.ErrorContainer>
+      <Styled.Image src={flyingSaucer} />
+      <Styled.Title>Какой-то сверхразум все сломал</Styled.Title>
+      <Styled.Text>Постараемся быстро починить</Styled.Text>
+      <Styled.TextUpdate>Попробовать снова</Styled.TextUpdate>
+    </Styled.ErrorContainer>
   );
 };
 

@@ -23,3 +23,8 @@ code {
 ul {
   list-style-type: none;
 }
+
+a {
+  color: #050510;
+  text-decoration: none;
+}

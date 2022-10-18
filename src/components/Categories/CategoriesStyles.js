@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const CategoryContainer = styled.div`
-  margin: 0 16px;
+  margin-bottom: 22px;
 `;
 
 export const CategoryList = styled.ul`
@@ -18,6 +18,34 @@ export const CategoryList = styled.ul`
 `;
 
 export const CategoryItem = styled.li`
+  position: relative;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.2s linear;
+  :hover,
+  :active {
+    color: #050510;
+  }
+
+  ${(props) =>
+    props.isActive &&
+    css`
+      color: #050510;
+      :after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid #6534ff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+      }
+    `}
+`;
+
+/* export const CategoryItem = styled.li`
   position: relative;
   padding: 8px 12px;
   cursor: pointer;
@@ -44,4 +72,4 @@ export const CategoryItem = styled.li`
   :active:after {
     opacity: 1;
   }
-`;
+`; */
