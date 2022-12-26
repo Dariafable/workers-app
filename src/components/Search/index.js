@@ -6,8 +6,6 @@ import * as Styled from './SearchStyles';
 
 const Search = () => {
   const dispatch = useDispatch();
-
-  //Modal states
   const [open, setOpen] = React.useState(false);
 
   const sortCategoryHandler = (value) => {
@@ -34,11 +32,7 @@ const Search = () => {
             <Styled.SortTitle>Sorting by</Styled.SortTitle>
             <Styled.CloseIcon onClick={modalHandler} />
             <Styled.InputContainer>
-              <Styled.RadioInput
-                type='radio'
-                name='sortBy'
-                value='alphabet' /* defaultChecked */ /* нужно, чтобы кнопка была активна в активном состоянии sort */
-              />
+              <Styled.RadioInput type='radio' name='sortBy' value='alphabet' />
               <label>alphabet</label>
             </Styled.InputContainer>
 

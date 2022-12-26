@@ -12,19 +12,16 @@ import Workers from '../../components/Workers';
 import { HomeContainer } from './HomeStyles';
 
 const Home = () => {
-  //Redux toolkit
   const { category, sort } = useSelector((state) => state.filters);
   const { workers, loading } = useSelector((state) => state.workers);
   const dispatch = useDispatch();
 
-  // States
   const [items, setItems] = React.useState([]);
 
   const onChangeCategory = (department) => {
     dispatch(setCategory(department));
   };
 
-  // Workers render (including skeleton)
   const workersItem = items.map((obj) => <Workers key={obj.id} {...obj} />);
   const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
 

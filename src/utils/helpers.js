@@ -1,5 +1,5 @@
 export const sortData = (sort, items) => {
-  if (sort !== "alphabet") {
+  if (sort !== 'alphabet') {
     const sortedDate = getUpcomingBirthdays([...items]);
     return sortedDate;
   }
