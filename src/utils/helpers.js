@@ -32,3 +32,29 @@ const getUpcomingBirthdays = (birthdays) => {
     return getNextBirthday(a.birthday) - getNextBirthday(b.birthday);
   });
 };
+
+export const pluralize = (value) => {
+  const str = String(value);
+  const char = Number(str[str.length - 1]);
+
+  if (char === 1) {
+    return `${value} год`;
+  }
+  if (char >= 2 && char < 5) {
+    return `${value} года`;
+  }
+  return `${value} лет`;
+};
+
+export const formatNumber = (phoneNumber) => {
+  const countryCode = phoneNumber.slice(0, 2);
+  const cityCode = phoneNumber.slice(2, 5);
+  const firstPart = phoneNumber.slice(5, 8);
+  const secondPart = phoneNumber.slice(8, 10);
+  const thirdPart = phoneNumber.slice(10, 12);
+  return `${countryCode} (${cityCode}) ${firstPart} ${secondPart} ${thirdPart}`;
+};
+
+export const debaunced = (fn, delay) => {
+  setTimeout(() => fn(), delay);
+};

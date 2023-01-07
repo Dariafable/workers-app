@@ -23,7 +23,7 @@ const Search = () => {
       <Styled.FormContainer>
         <Styled.SearchIcon />
         <Styled.SortIcon onClick={() => modalHandler()} />
-        <Styled.SearchForm placeholder='Enter name, tag, email...' type='text' />
+        <Styled.SearchForm placeholder='Enter name, tag ...' type='text' />
       </Styled.FormContainer>
 
       {open && (

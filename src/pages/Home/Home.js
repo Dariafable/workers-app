@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../../redux/slice/filters/filterSlice';
 import { getWorkersData } from '../../redux/slice/workers/actions';
-import { sortData } from '../../utils/helpers';
+import { sortData, debaunced } from '../../utils/helpers';
 
 import Search from '../../components/Search';
 import Categories from '../../components/Categories';
