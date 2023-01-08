@@ -128,6 +128,10 @@ export const InputContainer = styled.label`
   margin-bottom: 30px;
   display: flex;
   align-items: center;
+
+  :last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const RadioInput = styled.input`
