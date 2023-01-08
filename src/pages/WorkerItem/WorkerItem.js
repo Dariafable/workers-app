@@ -30,7 +30,7 @@ const WorkItem = () => {
         <Styled.Name>
           {`${item.firstName} ${item.lastName}`} <Styled.Abb>{item.userTag}</Styled.Abb>
         </Styled.Name>
-        <Styled.Work>{item.department}</Styled.Work>
+        <Styled.Work>{item.position}</Styled.Work>
       </Styled.Top>
 
       <Styled.Bottom>
@@ -40,7 +40,9 @@ const WorkItem = () => {
             <Styled.Date>{dayjs(item.birthday).format('DD MMMM YYYY')}</Styled.Date>
           </Styled.Birth>
           <Styled.Age>
-            <p>{pluralize(dayjs().diff(dayjs(item.birthday), 'year'))}</p>
+            <p>{dayjs().diff(dayjs(item.birthday), 'year')} years</p>
+            {/* for russin version
+             <p>{pluralize(dayjs().diff(dayjs(item.birthday), 'year'))}</p> */}
           </Styled.Age>
         </Styled.BirthInfo>
 

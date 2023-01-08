@@ -33,6 +33,7 @@ const getUpcomingBirthdays = (birthdays) => {
   });
 };
 
+//function for russian version
 export const pluralize = (value) => {
   const str = String(value);
   const char = Number(str[str.length - 1]);
