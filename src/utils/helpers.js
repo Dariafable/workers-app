@@ -56,5 +56,5 @@ export const formatNumber = (phoneNumber) => {
 };
 
 export const debaunced = (fn, delay) => {
-  setTimeout(() => fn(), delay);
+  return setTimeout(() => fn(), delay);
 };

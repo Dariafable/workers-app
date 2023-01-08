@@ -124,7 +124,7 @@ export const CloseIcon = styled(AiFillCloseCircle)`
   }
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.label`
   margin-bottom: 30px;
   display: flex;
   align-items: center;
