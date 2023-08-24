@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { useSelector } from 'react-redux';
-
 import WorkerItem from '../../pages/WorkerItem/WorkerItem';
+import reserve from '../../assets/reserve.svg';
 
 import * as Styled from './WorkerStyles';
 
@@ -15,7 +15,7 @@ const Workers = ({ id, avatarUrl, firstName, lastName, userTag, position, birthd
     <Link to={`/workerItem/${id}`} element={<WorkerItem />}>
       <Styled.Profiles>
         <Styled.ProfileItem>
-          <Styled.Photo src={avatarUrl} alt='' />
+          <Styled.Photo src={/* avatarUrl ||  */ reserve} alt='' />
           <Styled.WorkerInfo>
             <Styled.Right>
               <Styled.Name>

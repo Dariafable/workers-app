@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import reserve from '../../assets/reserve.svg';
 
 import Home from '../Home/Home';
 import { pluralize, formatNumber } from '../../utils/helpers';
@@ -26,7 +27,7 @@ const WorkItem = () => {
         <Link to='/' element={<Home />}>
           <Styled.BackArrow />
         </Link>
-        <Styled.WorkerPhoto src={item.avatarUrl || PLACEHOLDER_IMAGE} alt='' />
+        <Styled.WorkerPhoto src={/* item.avatarUrl ||  */ reserve} alt='' />
         <Styled.Name>
           {`${item.firstName} ${item.lastName}`} <Styled.Abb>{item.userTag}</Styled.Abb>
         </Styled.Name>
